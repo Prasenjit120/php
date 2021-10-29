@@ -21,16 +21,6 @@ if(isset($_POST['name'])){
     $sql = "INSERT INTO `btc`.`cdetails` (`name`, `vname`, `mno`, `dor`, `phone`, `md`, `dt`) VALUES ('$name', '$vname', '$mno', '$dor', '$phone', '$md', current_timestamp());";
     //echo $sql;
 
-    if($con->query($sql)== true){
-        $insert= true;
-        //echo "Successfully inserted";
-    }
-    else{
-        echo "error: $sql <br> $con->error";
-    }
-    $con->close();
-}
-
 ?> 
 <!DOCTYPE html>
 <html lang="en">
